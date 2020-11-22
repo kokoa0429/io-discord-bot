@@ -1,0 +1,22 @@
+{
+  "name": "io-discord-bot",
+  "version": "1.0.0",
+  "description": "io-discord-bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kokoa0429/io-discord-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kokoa0429/io-discord-bot/issues"
+  },
+  "homepage": "https://github.com/kokoa0429/io-discord-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.4.1"
+  }
+}
