@@ -28,8 +28,15 @@ client.on("message", message => {
                     message.reply("引数が足りません")
                     return
                 }
-                message.guild.channels.cache.array().filter(c => c.type == 'voice').filter(c => c.members.get(message.author.id))[0].edit({ name: 'new-channel' })
-                console.log(message.guild.channels.cache.array().filter(c => c.type == 'voice').filter(c => c.members.get(message.author.id))[0].name)
+                console.log("1")
+                message.guild.channels.cache.filter(c => c.type == 'voice')
+                    .filter(c => c.members.get(message.author.id))
+                    .first()
+                    .setName("title:" +  encodeURI(args[1]))
+                    .then(newChannel => console.log(`Channel's new name is ${newChannel.name}`))
+                    .catch(console.error);
+                console.log("2")
+                // console.log(message.guild.channels.cache.filter(c => c.type == 'voice').filter(c => c.members.get(message.author.id)).first())
                 message.delete()
                 break;
             default:
